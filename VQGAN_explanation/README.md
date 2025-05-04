@@ -6,7 +6,7 @@ This subfolder contains the implementation of CORTEX to explain the VQGAN model.
 
 ```
 CORTEX/VQGAN_explanation/
-├── checkpoints/            # Model checkpoints
+├── checkpoints/            # Model checkpoints (download required)
 ├── datasets/               # Datasets (download required)
 ├── eval/                   # Evaluation scripts
 │   ├── codebook_level_explanation.py
@@ -16,11 +16,10 @@ CORTEX/VQGAN_explanation/
 ├── logs/                   # Training logs
 ├── results/                # Results directory
 ├── taming/                 # VQGAN related modules
-├── model.py                # Model architecture
+├── model.py                # IEM architecture
 ├── new_vqgan.py            # Prepare for the VQGAN repository
 ├── dataset.py              # Dataset loader
 ├── train.py                # Training script for IEM
-├── train_vit.py            # Training script for ViT-based models
 ├── test.py                 # Evaluation script
 ├── TIS_computation.py      # Token Importance Score computation
 ├── TIS_analysis.py         # TIS analysis for concept-level explanations
@@ -31,6 +30,7 @@ CORTEX/VQGAN_explanation/
 1. Clone the repository of [VQGAN](https://github.com/CompVis/taming-transformers)
 2. Place the new_vqgan.py file into the VQGAN repository under the taming-transformers/taming/models directory
 3. Download the datasets and replace the `datasets` directory
+(The dataset was generated using the [VQGAN](https://github.com/CompVis/taming-transformers model.))
 4. Download pre-trained checkpoints and place them in the `checkpoints` directory
 
 ## 1. Training

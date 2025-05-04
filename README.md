@@ -1,6 +1,9 @@
 # CORTEX
 
-A unified repository for reproducing interpretability experiments on **VQGAN** and **DALLE**.
+## 📄 *Concept-Centric Token Interpretation for Vector-Quantized Generative Models*
+
+**Tianze Yang†, Yucheng Shi†, Mengnan Du, Xuansheng Wu, Qiaoyu Tan, Jin Sun, Ninghao Liu**  
+† Equal contribution
 
 ---
 
