@@ -6,12 +6,15 @@
 **Tianze Yang†, Yucheng Shi†, Mengnan Du, Xuansheng Wu, Qiaoyu Tan, Jin Sun, Ninghao Liu**  
 † Equal contribution
 
+This is the official repository for our paper *"Concept-Centric Token Interpretation for Vector-Quantized Generative Models"*, accepted at the **International Conference on Machine Learning (ICML) 2025**.  
+We propose a novel framework, **CORTEX**, for interpreting tokens in vector-quantized generative models through a concept-centric lens.
 
 <p align="center">
   <img src="pipeline.jpg" alt="Pipeline Overview" width="80%">
 </p>
 
 <p align="center"><b>Figure:</b> Our pipeline for token-level concept interpretation.</p>
+
 ---
 
 ## 1. ⚙️ Environment
@@ -75,10 +78,8 @@ CORTEX/VQGAN_explanation/
 │   ├── codebook_level_explanation.py
 │   ├── sample_concept_level_explanation.py
 │   ├── sample_image_level_explanation.py
-├── explanation_evaluation/ # Evaluation metrics for explanations
 ├── logs/                   # Training logs
 ├── results/                # Results directory
-├── taming/                 # VQGAN related modules
 ├── model.py                # IEM architecture
 ├── new_vqgan.py            # Prepare for the VQGAN repository
 ├── dataset.py              # Dataset loader
@@ -94,7 +95,7 @@ CORTEX/VQGAN_explanation/
 ### ⚙️ Setup
 
 1. Clone the repository of [VQGAN](https://github.com/CompVis/taming-transformers)
-2. Place the `new_vqgan.py` file into the VQGAN repository under the `taming-transformers/taming/models` directory
+2. Place the `new_vqgan.py` file into the VQGAN repository under the `taming-transformers/taming/models` directory (If you want to run `eval/codebook_level_explanation.py`)
 3. Download the datasets or generate your own dataset and replace the `datasets` directory  
    (The dataset was generated using the [VQGAN](https://github.com/CompVis/taming-transformers) model.)
 4. Download pre-trained checkpoints or train your own IEMs and place them in the `checkpoints` directory
@@ -115,7 +116,7 @@ You can train your own Interpretable Explanation Model (IEM) on different Vector
 
 #### 🔢 Input Format
 The model input is a token-based embedding with shape **(256, 16, 16)**.
-To train IEMs on other **Vector-Quantized Generative Models (VQGMs)**, you need to first generate the required dataset:
+To train IEMs on other **VQGMs**, you need to first generate the required dataset:
 
 - For each image, save its **token-based embedding** (of shape `256 × 16 × 16`)
 - During generation, record the corresponding **token indices** and **label**
@@ -237,7 +238,6 @@ CORTEX/Dalle_explanation/
 ├── train.py                # Training script for IEM
 ├── TIS_computation.py      # Token Importance Score computation
 ├── TIS_analysis.py         # TIS analysis
-├── README.md               # Local instruction file
 ```
 
 ---
@@ -286,7 +286,7 @@ python TIS_analysis.py --model 1 --bias_type doctor_color  # or doctor_gender
 #### 🧯 2.4 Bias Token Detection
 
 ```bash
-python bias_detection.py --model 1 --bias_type doctor_color --top_n 10 --token_num 10
+python bias_detection.py --model 1 --bias_type doctor_color --top_n {top_n_value} --token_num {token_num_value}
 # or use doctor_gender
 ```
 
