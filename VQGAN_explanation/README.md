@@ -140,6 +140,3 @@ python codebook_level_explanation.py --model 1 --optimization_type token
 
 [License information]
 
-## Acknowledgements
-
-[Acknowledgements information]

@@ -73,8 +73,7 @@ def get_token_frequencies(token_list: List[int], data_csv_path: str) -> List[flo
 
 def perform_cliff(freqs1: List[float], freqs2: List[float]) -> Dict:
     """
-    Perform Mann-Whitney U test between two groups of frequencies,
-    and also compute Cliff's Delta as an effect size measure.
+    compute Cliff's Delta as an effect size measure.
     """
     cd = cliff_delta(freqs1, freqs2)
     
