@@ -6,7 +6,7 @@
 **Tianze Yang†, Yucheng Shi†, Mengnan Du, Xuansheng Wu, Qiaoyu Tan, Jin Sun, Ninghao Liu**  
 † Equal contribution
 
-This is the official repository for our paper *"Concept-Centric Token Interpretation for Vector-Quantized Generative Models"*, accepted at the **International Conference on Machine Learning (ICML) 2025**.  
+This is the official repository for our paper [*"Concept-Centric Token Interpretation for Vector-Quantized Generative Models"*](https://arxiv.org/abs/2506.00698), accepted at the **International Conference on Machine Learning (ICML) 2025**.  
 We propose a novel framework, **CORTEX**, for interpreting tokens in vector-quantized generative models through a concept-centric lens.
 
 <p align="center">
